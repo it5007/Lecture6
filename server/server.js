@@ -52,10 +52,10 @@ function issueList(_, {id})
 function issueAdd(_, {newissue})
 {
 newissue.created = new Date();
-newissue.id = issueDB.length + 1;
+newissue.id = issuesDB.length + 1;
 newissue.status = 'New';
-issueDB.push(newissue);
-return issueDB[issueDB.length-1];
+issuesDB.push(newissue);
+return issuesDB[issuesDB.length-1];
 }
 
 

@@ -1,14 +1,10 @@
 scalar GraphQLDate
 
-type OWNER {
-	name:String
-	age:Int
-}
 type Issue {
   id: Int!
   title: String!
   status: String!
-  owner: [OWNER]
+  owner: String
   effort: Int
   created: GraphQLDate!
   due: GraphQLDate
@@ -18,7 +14,7 @@ input IssueInputs {
   title: String!
   "Optional, if not supplied, will be set to 'New'"
   status: String
-  owner: [String]
+  owner: String
   effort: Int
   due: GraphQLDate
 }
